@@ -1,0 +1,59 @@
+/**
+ *
+ * jQuery plugin: Popup 1.0
+ *
+ * Copyright (c) 2008 Yves Bresson
+ * www.ybresson.com
+ *
+ * Default styles
+ *
+ */
+
+#popup {
+  display: none;
+  position: fixed;
+  width: 290px;
+  _position: absolute; /* hack for internet explorer 6 */
+  background: #FFCF69 url(../../../images/gradient-yellow-light.png) repeat-x scroll 0 0;
+  z-index: 110;
+  padding: 5px;  /* same as rounding */
+  height: 100px;
+}
+
+#popup_bg {
+  display: none;
+  position: fixed;
+  _position: absolute; /* hack for internet explorer 6 */
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: #000000;
+  border: 1px solid #cecece;
+  z-index: 100;
+}
+
+#popup_title {
+  font-weight: bold;
+  color: black;
+}
+
+#popup_close {
+  width: 14px;
+  height: 14px;
+  background: url('close-off.png') no-repeat;
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+}
+#popup_close:hover {
+  background: url('close.png') no-repeat;
+}
+
+#popup_message {
+  padding: 8px;
+  background: #ffffff;
+  height: 67px;
+  paddidata-ng-left: 20px;
+  /*min-height: 120px;*/
+}

@@ -1,0 +1,1550 @@
+/* Fixes Microsoft's nonsense on Windows Phone screen detection*/
+@-ms-viewport{width: device-width;}
+
+/**********
+ * Global *
+ **********/
+.asu_search_button {
+	background-color: #DDD;
+	border: 1px solid #D4C4AA;
+	cursor: pointer;
+	font-size: 11px;
+	float: left;
+	margin: 0;
+	padding: 0;
+	color: #fff;
+}
+
+.asu_search_box {
+	border: 1px solid #999;
+	float: left;
+	font: 11px/ 15px Tahoma, Arial, Helvetica, sans-serif;
+	color: #333;
+	margin: 0 5px;
+	background-color: #F2F2E6;
+	padding: 2px 0 3px 3px;
+	width: 185px;
+}
+
+#mainContent ul li {font-size: 8pt;}
+
+#asu_maroon_nav li {
+	border-right: 1px solid #FFF;
+	font:700 1em/ 2.5em Tahoma, Arial, sans-serif;
+	color: #FFF;
+	display: inline;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+#asu_maroon_nav li a {
+	color: #FFF;
+	text-decoration: none;
+	padding: 0 .66em 0 .41em;
+}
+
+#copyright{
+	color: #666;
+	position: absolute;
+	text-align: right !important;
+	width: 100%;
+	top: 100%
+}
+
+#copyright div{paddidata-ng-right: 34px;}
+
+#asu_footer li {
+	border-right: 1px solid #FFF;
+	display: inline;
+	list-style-type: none;
+	font: normal .95em/ 2em Tahoma, Arial, sans-serif;
+	color: #FFF;
+	margin: 0;
+	padding: 0;
+}
+
+#asu_footer li a {color: #FFF; text-decoration: none; padding: 0 .66em;}
+
+.rqDesDescrColumnValue,.classNbrColumnValue,
+.subjectNumberColumnValue,.dayListColumnValue,
+.startTimeDateColumnValue,.endTimeDateColumnValue,
+/*.instructorListColumnValue,*/.locationBuildingColumnValue,
+.rqDesDescrColumnValue,.rqDesDescrColumnHeader{white-space: nowrap;}
+
+.dayListColumnValue,.startTimeDateColumnValue,.endTimeDateColumnValue,.instructorListColumnValue,.locationBuildingColumnValue{line-height: 12px;}
+
+.crs-description,.crs-enroll-reqs,.crs-units,.crs-genstuds,.crs-repeatable,.crs-campus{color: #444 /*#993300  #630*/}
+#course-content {font-size: 10pt;}
+#subjectEntry,#catalogNbr {width: 30px;}
+#errors {color: #903;}
+
+/********************
+ * Catalog List Table *
+ ********************/
+TABLE#CatalogList {
+	border: 1.5px solid #ccc;
+	table-layout: auto;
+	margin: 10px 0;
+	width: 98%;
+	font-family: arial, helvetica, sans-serif;
+	/*border-collapse: collapse*/
+}
+
+TABLE#CatalogList TR {background-color: transparent; vertical-align: top;}
+TABLE#CatalogList TR.banner {
+	font-size: 12pt;
+	background: url(../images/gradient-gray.png) repeat-x 50% top;
+	text-transform: uppercase;
+	color: #000;
+	letter-spacing: 3px;
+	text-align: center;
+}
+
+TABLE#CatalogList TR.banner TH {padding: 5px}
+
+body TABLE#CatalogList TR.headings {
+	font-weight:700;
+	font-size: 8pt;
+	color: #eee;
+	white-space: nowrap;
+	background-color: transparent;
+	text-align: center;
+}
+
+TABLE#CatalogList TR.headings A {color: #444 !important; text-decoration: none; white-space: nowrap;}
+
+TABLE#CatalogList TR.headings TH {
+	border-right: #fff 1px solid;
+	font-weight:700;
+	background: url(../images/CS-header_bg.jpg) repeat-x 50% top;
+	height: 20px;
+	color: #000;
+}
+
+TABLE#CatalogList TR.headings TH:hover {background: url(../images/gradient-yellow-dark.png) repeat-x 50% top}
+TABLE#CatalogList TR.headings TH A:hover {background: transparent; color: #999; text-decoration: none}
+TABLE#CatalogList TD {background: transparent; padding: 0 6px 1px;}
+TR.odd,TABLE#CatalogList TR.odd,TABLE#CatalogList TR.odd td {background: #fff}
+TR.even,TABLE#CatalogList TR.even,TABLE#CatalogList TR.even td {background: #eee}
+
+TABLE#CatalogList TR.even:hover,TABLE#CatalogList TR.even:hover td,TABLE#CatalogList TR.odd:hover,
+TABLE#CatalogList TR.odd:hover td{background: #ffe8b7}
+
+TABLE#CatalogList TR.grpEven:hover,TABLE#CatalogList TR.grpEven:hover td,TABLE#CatalogList TR.grpOdd:hover,
+TABLE#CatalogList TR.grpOdd:hover td, TABLE#CatalogList TR.grpEvenTitle:hover td, TABLE#CatalogList TR.grpOddTitle:hover td{background: #ffe8b7}
+
+TABLE#CatalogList #cohortMessage{ position: absolute; font-style: oblique; width: 470px; white-space: nowrap;}
+TABLE#CatalogList TR.borderBottom td{border-top: solid 1px #CCC;}
+TR.grpEven,TABLE#CatalogList TR.grpEven,TABLE#CatalogList TR.grpEven td,
+TABLE#CatalogList TR.grpEvenTitle td{background: #eee}
+TABLE#CatalogList TR.grpEvenTitle td, TABLE#CatalogList TR.grpOddTitle td{height: 30px; vertical-align: bottom;}
+TR.grpOdd,TABLE#CatalogList TR.grpOdd,TABLE#CatalogList TR.grpOdd td,
+TABLE#CatalogList TR.grpOddTitle td {background: #fff}
+
+.tooltipRqDesDescrColumnValue {vertical-align: top;}
+.subjectNumberColumnValue {text-align: left;}
+.enrollReq {margin-left:50px; display: block;}
+#MajorList TR.headings IMG {vertical-align: middle}
+#CatalogList TR.headings TD:hover {background: transparent}
+
+TABLE#CatalogList TABLE.tableHeaderTable {table-layout: auto; border: none; }
+TABLE#CatalogList TABLE.tableHeaderTable TR:hover {background: transparent}
+table#CatalogList td.tablepager {
+	text-align: right;
+	border-top: 1px solid #eee;
+	paddidata-ng-right: 10px;
+}
+
+.gstip {cursor: default;}
+/*############### End catalogList */
+
+.rqDesDescr2ColumnValue,.classNbr2ColumnValue,
+.subjectNumber2ColumnValue,.dayList2ColumnValue,
+.startTimeDate2ColumnValue,.endTimeDate2ColumnValue,
+/*.instructorListColumnValue,*/.locationBuilding2ColumnValue,
+.rqDesDescr2ColumnValue,.rqDesDescr2ColumnHeader{white-space: nowrap;}
+
+.dayList2ColumnValue,.startTimeDate2ColumnValue,.endTimeDate2ColumnValue,.instructorList2ColumnValue,.locationBuilding2ColumnValue{line-height: 12px;}
+
+.crs-description,.crs-enroll-reqs,.crs-units,.crs-genstuds,.crs-repeatable,.crs-campus{color: #444}
+#course-content {font-size: 10pt;}
+#subjectEntry,#catalogNbr {width: 30px;}
+#errors {color: #903;}
+
+/********************
+ * Catalog List Table *
+ ********************/
+TABLE#CatalogList2 {
+	table-layout: auto;
+	margin: 10px 0;
+	width: 98%;
+	border: #ccc 1.5px solid;
+	font-family: arial, helvetica, sans-serif;
+}
+
+TABLE#CatalogList2 TR {
+	background-color: transparent;
+	vertical-align: top;
+}
+
+TABLE#CatalogList2 TR.banner {
+	font-size: 12pt;
+	background: url(../images/gradient-gray.png) repeat-x 50% top;
+	text-transform: uppercase;
+	color: #000;
+	letter-spacing: 3px;
+	text-align: center;
+}
+
+TABLE#CatalogList2 TR.banner TH {padding: 5px}
+
+body TABLE#CatalogList2 TR.headings {
+	font-weight:700;
+	font-size: 8pt;
+	color: #eee;
+	white-space: nowrap;
+	background-color: transparent;
+	text-align: center;
+}
+
+TABLE#CatalogList2 TR.headings A {
+	color: #444 !important;
+	text-decoration: none
+}
+
+TABLE#CatalogList2 TR.headings TH {
+	border-right: 1px solid #fff;
+	font-weight:700;
+	background: url(../images/CS-header_bg.jpg) repeat-x 50% top;
+	height: 20px;
+	color: #000;
+}
+TABLE#CatalogList2 TR.headings TH:hover {background: url(../images/gradient-yellow-dark.png) repeat-x 50% top}
+TABLE#CatalogList2 TR.headings TH A:hover {background: transparent; color: #999; text-decoration: none}
+TABLE#CatalogList2 TD {background: transparent; padding: 0 6px 1px;}
+TR.odd,TABLE#CatalogList2 TR.odd,TABLE#CatalogList2 TR.odd td {background: #fff}
+TR.even,TABLE#CatalogList2 TR.even,TABLE#CatalogList2 TR.even td {background: #eee}
+TABLE#CatalogList2 TR.even:hover,TABLE#CatalogList2 TR.even:hover td,TABLE#CatalogList2 TR.odd:hover,
+TABLE#CatalogList2 TR.odd:hover td
+{background: #ffe8b7}
+
+TABLE#CatalogList2 TR.grpEven:hover,TABLE#CatalogList2 TR.grpEven:hover td,TABLE#CatalogList2 TR.grpOdd:hover,
+TABLE#CatalogList2 TR.grpOdd:hover td, TABLE#CatalogList2 TR.grpEvenTitle:hover td, TABLE#CatalogList2 TR.grpOddTitle:hover td
+{background: #ffe8b7}
+
+TABLE#CatalogList2 #cohortMessage{
+	position: absolute;
+	font-style: oblique;
+	width: 470px;
+	white-space: nowrap;
+}
+
+TABLE#CatalogList2 TR.borderBottom td{border-top: solid 1px #CCC;}
+TR.grpEven,TABLE#CatalogList2 TR.grpEven,TABLE#CatalogList2 TR.grpEven td,
+TABLE#CatalogList2 TR.grpEvenTitle td{background: #eee}
+TABLE#CatalogList2 TR.grpEvenTitle td, TABLE#CatalogList2 TR.grpOddTitle td{height: 30px; vertical-align: bottom;	}
+TR.grpOdd,TABLE#CatalogList2 TR.grpOdd,TABLE#CatalogList2 TR.grpOdd td,
+TABLE#CatalogList2 TR.grpOddTitle td {background: #fff}
+
+.tooltipRqDesDescr2ColumnValue {vertical-align: top;}
+.subjectNumber2ColumnValue {text-align: left;}
+#MajorList TR.headings IMG {vertical-align: middle}
+#CatalogList2 TR.headings TD:hover {background: transparent}
+TABLE#CatalogList2 TABLE.tableHeaderTable {table-layout: auto; border: none;}
+TABLE#CatalogList2 TABLE.tableHeaderTable TR:hover {background: transparent}
+table#CatalogList2 td.tablepager {text-align: right; border-top: 1px solid #eee; paddidata-ng-right: 10px;}
+.gstip {cursor: default;}
+
+/*############### End catalogList2 */
+
+.honorshead {font-size: 13px; color: #903; text-align: left; margin-left:10px;}
+.classes_table { color: #633; table-layout: auto; font-size: 11px;}
+.class-values {vertical-align: top;}
+table.classes_table .class-values {white-space: normal;}
+.class-heading {FONT-WEIGHT:700; color: #333; width: 65px; /*text-align: center;*/}
+.reserved-heading {FONT-WEIGHT:700; color: #333; width: 65px; text-align: center;}
+.groupDescription {text-align: left; width: 255px;}
+.start-value {text-align: right; paddidata-ng-right: 4px; width: 65px;}
+.end-value {text-align: right; paddidata-ng-right: 25px; width: 55px;}
+.offer-by { paddidata-ng-left: 4px; width: 300px;}
+.locationBuildidata-ng-value {vertical-align: top;}
+.days-value {width: 54px; white-space: nowrap;}
+.lab-designation {color: #666;font-size: 6pt; cursor: default;}
+.class-message {text-align: left; color: #666;paddidata-ng-left: 10px;}
+.tooltip-type {text-align: right; color: #333; paddidata-ng-left: 10px; vertical-align: top; font-weight:700;}
+
+#term,#termCourse,#searchType,#subjectEntry,#catalogNbr,#level,#campus,#gs,#gsAw,
+#addGsAw, #keywords,#classNbr,#instructorName,#term_class,#term_course {font-size: .9em;}
+
+#gs,#gsAw,#addGsAw {width: 53px;}
+#gsAw,#gsAwLabel,#addGsAw,#addGsAwLabel {display: none;}
+#term {width: 98px;}
+#term_class,#term_course {width: 100px}
+#searchType {width: 103px;}
+.term {width: 98px;}
+
+.nameColumnValue,.dayListColumnValue,.courseTitleLongColumnValue,.rqDesDescrColumnValue,
+.titleColumnValue,.locationBuildingColumnValue,.instructorListColumnValue,.classNbrColumnValue{
+	text-align: left; paddidata-ng-right: 20px;}
+	
+.name2ColumnValue,.dayList2ColumnValue,.courseTitleLong2ColumnValue,.rqDesDescr2ColumnValue,
+.title2ColumnValue,.locationBuilding2ColumnValue,.instructorList2ColumnValue,.classNbr2ColumnValue{
+	text-align: left; paddidata-ng-right: 20px;}
+	
+.startDateColumnValue {min-width: 80px; line-height: 12px; white-space: nowrap; cursor: help;}
+
+.startDateColumnValue,
+.dayListColumnValue,
+.startTimeDateColumnValue,
+.endTimeDateColumnValue,
+.locationBuildingColumnValue,
+.instructorListColumnValue{
+	paddidata-ng-top: 2px !important;
+}
+
+.hoursColumnHeader {
+	text-align: left;
+	paddidata-ng-right: 0;
+	paddidata-ng-left: 0;
+	width: 20px;
+}
+
+availableSeatsColumnValue {text-align: left;}
+.startTimeDateColumnValue,.endTimeDateColumnValue {text-align: right;}
+.availableSeatsColumnValue {text-align: center;}
+
+#courseTitleBar {font-size: 14pt;/*height: 22px;*/ line-height: 21px;}
+#courseTitleBar .termText {width: 130px;}
+
+.hide {display: none;}
+
+/* Display menus if no javascript, javascript will hide them after page load */
+div.box div {display: block;}
+
+H1 {font-weight:700; font-size: 18pt; margin: 0 0 10px; color: #999}
+
+a {text-decoration: none;}
+a:visited {text-decoration: none; color: #903;}
+td {white-space: normal;}
+
+/**********************************
+ * ASU Header - override template *
+ **********************************/
+a:hover,div.searchMenuHeading:hover {text-decoration: underline;}
+#asu_maroon_nav {border: none;}
+#asu_logo a {height: 37px; display: block;}
+#asu_login_module li {border: none;}
+
+/********************************
+ * ASU Footer Template override *
+ ********************************/
+html,body,#asu_container {
+	min-height: 100%; /*Sets the min height to the height of the viewport.*/
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+#asu_container {min-width: 1130px !important;}
+
+html>body,html>body #asu_container {
+	height: auto; /*this undoes the IE hack, hiding it
+					from IE using the child selector */
+}
+
+#asu_container {position: absolute; top: 0; left: 0;}
+#asu_footer {position: absolute; bottom: 0; width: 100%; margin: 0; padding: 0 !important; border: 0;}
+#main {margin-bottom: 3em; height: auto; padding: .5em;}
+
+/****************************
+ * General Layout and Style *
+ ****************************/
+#mainContentContainer {margin: 0 auto; width: 1000px; padding: 0}
+
+TABLE#mainLayoutTable {width: 99%; border: none; /* table-layout: fixed;*/}
+TABLE#mainLayoutTable TR { /*background: transparent;*/}
+TABLE#mainLayoutTable TD {padding: 15px 5px; border: none; /* background: transparent;*/}
+TD#mainContent {vertical-align: top;text-align: left;}
+
+.heading1 {
+	font-weight:700;
+	font-size: 18pt;
+	color: #999;
+	font-family: arial, helvetica, sans-serif
+}
+
+.emphasized {font-weight:700}
+ul.errors {margin-top: 5px;}
+.errors {color: #903; paddidata-ng-top: 30px;}
+
+#mainContent a, .locationtip {
+	color: #903 !important;
+	text-decoration: none !important;
+	border-bottom: dotted 1px silver !important;
+}
+
+#mainContent a:hover {
+	color: #903 !important;
+	text-decoration: none !important;
+	border-bottom: solid 1px #903 !important;
+}
+
+/************************
+ * Side Menu Navigation *
+ ************************/
+#sideMenu P.menuTitle {font-weight:700; font-size: 18px; font-family: arial, helvetica, sans-serif}
+TD#sideMenu {vertical-align: top; width: 175px}
+#sideMenu P.menuSubTitle, #sideMenu P.menuSubTitle A {font-weight: 700; font-size: 14px; margin-bottom: 5px; font-family: arial, helvetica, sans-serif}
+.searchMenuSection {background: #eee; border: #fff 1px solid; padding: 5px 3px 3px 3px;}
+.searchMenuHeading {cursor: pointer; color: #903}
+#sideMenu P, #searchMenu {font-weight:700; font-size: 12px; font-family: arial, helvetica, sans-serif}
+
+#sideMenu UL {
+	paddidata-ng-left: 0;
+	font-weight: normal;
+	list-style-position: outside;
+	font-size: 12px;
+	background: url(../images/vline.png) repeat-y;
+	margin-left: 10px;
+	margin-top: 5px;
+	list-style-type: none
+}
+
+#sideMenu LI {
+	background: url(../images/vline-greybubble.png) no-repeat;
+	margin: 0;
+	line-height: 20px;
+	padding: 0 5px 0 20px
+}
+#sideMenu LI.current {background: url(../images/vline-goldbubble.png) no-repeat}
+#sideMenu LI.last {background: url(../images/vline-greybubble-bottom.png) no-repeat}
+#sideMenu LI.lastcurrent {background: url(../images/vline-goldbubble-bottom.png) no-repeat}
+#sideMenu LI.first {background: url(../images/vline-greybubble-top.png) no-repeat}
+#sideMenu LI.firstcurrent {background: url(../images/vline-goldbubble-top.png) no-repeat}
+
+/* Search Menu Box */
+#searchMenu {margin-top: 20px; width: 150px}
+#searchMenuBrowse FORM,#searchMenuKeyword FORM {margin: 0 0 5px}
+#searchMenuAlpha {}
+#searchMenuAlpha .searchMenu-letter {font-size: smaller}
+#searchMenuKeyword #keywordInput {width: 90%}
+#searchMenuBrowse {}
+#searchMenuBrowse SELECT {font-size: smaller; width: 100%;}
+
+#searchBoxContainer select {background: #FFF;}
+
+.searchMenuSection #GoArea,.searchMenuSection #GoKeyword,.searchMenuSection #GoCollege{background-color: #eee; font-size: smaller;}
+#searchMenuKeyword #keywordEntry {width: 90%}
+#sideSearchBoxContentTable .td {paddidata-ng-top: 3px; paddidata-ng-left: 2px}
+
+#adv-search #hide1 {paddidata-ng-left: 2px}
+#adv-search #startTime,#adv-search #endTime {width: 79px;}
+#adv-search #startDate,#adv-search #endDate {width: 78px;}
+#adv-search #session_0 {width: 100px;}
+#adv-search #instructorName,#adv-search #classNbr {width: 93px;}
+#adv-search #college {font-family: arial narrow, arial; font-size: 11px; width: 154px;}
+
+.advSearchImg{border: none; height: 23px;}
+.sideSearchBoxContent #units {font-size: 11px; width: 100px;}
+.sideSearchBoxContent #college {width: 148px;}
+
+DIV#mainContent #titleLink{
+	 font-family: Helvetica, Arial, sans-serif;
+	 font-size: 23px;
+	 line-height: 19px;
+	 font-weight:bold;
+	 color:#000;
+	 letter-spacing:0px;
+	 border-bottom:none;  
+	 margin:0;
+	 padding:0; 
+	 z-index: 2000;
+	 
+}
+
+DIV#mainContent #titleLink a{ color:#990000 !important; border-bottom: none !important; cursor: pointer !important;}
+
+.display{display: block;}
+.no-display,#no-display{display: none;}
+
+/****************************
+ * Front Page Rounded Boxes *
+ ****************************/
+#advancedSearchBoxContainer {margin: 0 auto 0; width: 570px; text-align: center;}
+#advancedSearchBox {paddidata-ng-right: 5px; paddidata-ng-left: 5px; float: left; width: 545px;}
+.advancedSearchBoxContentContainer {padding: 1px 0 15px 0;}
+.advancedSearchBoxContent {
+	border-right: #eee 2px solid;
+	margin-top: -3px;
+	background: url(../images/gradient-gray.gif) repeat-x 50% top;
+	border-left: #eee 2px solid;
+	border-top-style: none;
+	border-bottom: #eee 2px solid;
+	height: auto;
+	padding: 0 0 10px 0;
+}
+
+#sideSearchBoxContainer {margin: 0 auto 0; text-align: left; width: 179px;}
+#sideSearchBox {paddidata-ng-right: 5px; paddidata-ng-left: 5px; float: left; width: 170px;} 
+.sideSearchBoxContentContainer {paddidata-ng-right: 0; paddidata-ng-left: 0; paddidata-ng-bottom: 15px; margin-top: 7px;}
+
+.sideSearchBoxContent {
+	border-right: #eee 2px solid;
+	margin-top: -3px;
+	background: url(../images/gradient-gray.gif) repeat-x 50% top;
+	border-left: #eee 2px solid;
+	border-top-style: none;
+	border-bottom: #eee 2px solid;
+	height: auto;
+	padding: 0 0 10px 0;
+}
+
+#azlistBox, #searchBox, #browseBox {paddidata-ng-right: 5px; paddidata-ng-left: 5px; float: left; width: 280px}
+
+.rnd-box-yellow {
+	background: url(../images/bar-bg.png) repeat-x 50% top;
+	margin: 0;
+	border-style: none;
+	padding: 0;
+	height: 37px;
+	text-align: center;
+}
+
+.rnd-box-yellow .l-sb {z-index: 10; background: url(../images/bar-l-corner.png) no-repeat left top; border-style: none; height: 37px;}
+.lt-corner {z-index: 10; background: url(../images/lt-corner.gif) no-repeat left top; height: 37px}
+.lb-corner {z-index: 10; background: url(../images/lb-corner.gif) no-repeat left bottom; height: 37px}
+.rnd-box-yellow .r-sb {z-index: 10; background: url(../images/bar-r-corner.png) no-repeat right top; height: 37px}
+.rt-corner {z-index: 10; background: url(../images/rt-corner.gif) no-repeat right top; height: 37px}
+.rb-corner {z-index: 10; background: url(../images/rb-corner.gif) no-repeat right bottom; height: 37px}
+.rnd-box-yellow P {font-weight:700; font-size: 14px; vertical-align: middle; color: #444; paddidata-ng-top: 13px}
+.rnd-box-yellow-side P {
+	font-weight:700;
+	font-size: 12px;
+	line-height: 13px;
+	vertical-align: middle;
+	color: #444;
+	paddidata-ng-top: 7px
+}
+
+.rnd-box-yellow A {color: #444;}
+
+.box-content {
+	border-right: #eee 2px solid;
+	margin-top: -3px;
+	background: url(../images/gradient-gray.gif) repeat-x 50% top;
+	border-left: #eee 2px solid;
+	border-top-style: none;
+	padding: 0;
+	border-bottom: #eee 2px solid;
+	height: 140px;
+	text-align: center;
+}
+
+.search-label {text-align: right;}
+.front_search .search-label {width: 135px;}
+
+.sideSearchBoxContent .search-label {width: 58px;}
+.search-input {text-align: left;}
+.padding {paddidata-ng-top: 5px}
+.time {paddidata-ng-top: 8px}
+.box-content P {paddidata-ng-top: 5px}
+.box-content P.note {font-size: smaller}
+.box-content FORM {margin: 0}
+.box-content-container {padding: 1px 0 15px 0;}
+
+.search-letter-container {margin: 0 auto; width: 262px; paddidata-ng-top: 20px; font-size: .9em;}
+.search-letter {display: block; float: left; width: 10px}
+.search-letter:hover {background: #ffc}
+#honors {margin-left: 0}
+.levelLabel {paddidata-ng-left: 2px;}
+.gsLabel {paddidata-ng-left: 25px;}
+.gsAwLabel,.addGsAwLabel {paddidata-ng-left: 268px;}
+.gray {color: gray;}
+
+.search-input INPUT {height: 13px; paddidata-ng-top: 0 px; font-size: 11px}
+#adv-search a{border-bottom: none !important;}
+#adv-search a:HOVER{border-bottom: none !important;}
+
+/************
+ * Tooltips *
+ ************/
+.tooltipBox {paddidata-ng-right: 5px; paddidata-ng-left: 5px; float: left; width: 375px}
+
+.tooltip-box-upper {
+	background: url(../images/upper-filling.gif) repeat-x 50% top;
+	margin: 0;
+	border-style: none;
+	padding: 0;
+	height: 37px;
+	text-align: center;
+}
+
+.tooltip-box-content {z-index: 10; background: url(../images/body.gif) repeat top; padding: 0}
+.tooltip-box-content .l-with-border {z-index: 10; background: url(../images/l-corner-with-border.gif) repeat-y}
+.tooltip-box-content .r-with-border {z-index: 10; background: url(../images/r-corner-with-border.gif) repeat-y right top}
+.tooltip-box-lower {
+	background: url(../images/lower-filling.gif) repeat-x bottom;
+	margin: 0;
+	padding: 0;
+	height: 37px;
+	text-align: center
+}
+
+.tt,.adv-search-tt,.datetip,.deadlinetip,.rsrvtip,.icontip,.suntip{cursor: help; border-bottom-style: none}
+.tooltip {display: none;}
+
+BODY .dojoTooltip {background: none; color: #000; border: 0;}
+BODY .majorTooltip {width: 350px; padding: 5px; text-align: center}
+BODY .degreeTooltip {width: 350px; padding: 5px; text-align: center}
+BODY .collegeTooltip {width: 350px; padding: 5px; text-align: center}
+BODY .campusTooltip {width: 350px; padding: 5px; text-align: center}
+
+.searchTooltip {width: 350px; padding: 5px; text-align: center}
+.searchTooltip {width: 250px}
+.tipTitle {font-weight:700; margin: auto; color: #000; text-align: center;}
+.tipDesc { text-align: left; paddidata-ng-left: 17px; paddidata-ng-right: 17px}
+.tipDesc UL {margin-bottom: 0; text-align: left}
+.tipDesc IMG {float: none; margin: 2px 3px 2px 0; border: #666 1px solid}
+.campusTooltip .tipDesc {text-align: center}
+.campusTooltip IMG {float: none}
+
+.lateRegInstructions {font-size: 12px; border-bottom: 1px dotted #903;}
+.lateRegInstructions:hover {text-decoration: none; border-bottom: 1px solid #903;}
+
+/********************
+ * Major List Table *
+ ********************/
+div.error_msg{color: #A40047; font-size: larger; margin-left: 30px; margin-top: -40px;}
+div.noResults{text-align:left;}
+div.noResults p {font-size: larger; paddidata-ng-top: 1em; paddidata-ng-bottom: 1em;}
+TABLE#MajorList {table-layout: auto; margin: 10px 0; width: 98%; border: #ccc 2px solid; font-family: arial, helvetica, sans-serif; border-collapse: collapse}
+TABLE#MajorList TR {background-color: transparent;}
+
+TABLE#MajorList TR.banner {
+	font-size: 12pt;
+	background: url(../images/gradient-gray.png) repeat-x 50% top;
+	text-transform: uppercase;
+	color: #000;
+	letter-spacing: 3px;
+	text-align: center
+}
+
+TABLE#MajorList TR.banner TH {padding: 5px}
+body TABLE#MajorList TR.headings {
+	font-weight:700;
+	font-size: 11pt;
+	color: #000;
+	white-space: nowrap;
+	background-color: transparent;
+	text-align: center;
+}
+
+TABLE#MajorList TR.headings A {color: #000; text-decoration: none}
+
+TABLE#MajorList TR.headings TH {
+	border-right: #fff 1px solid;
+	font-weight:700;
+	background: url(../images/gradient-yellow-light.png) repeat-x 50% top;
+	height: 30px
+}
+
+TABLE#MajorList TR.headings TH:hover {background: url(../images/gradient-yellow-dark.png) repeat-x 50% top}
+TABLE#MajorList TR.headings TH A:hover {background: transparent; color: #000; text-decoration: none}
+TABLE#MajorList TD {padding: 1px 2px; background: transparent;}
+TR.odd,TABLE#MajorList TR.odd,TABLE#MajorList TR.odd td {background: #fff}
+TR.even,TABLE#MajorList TR.even,TABLE#MajorList TR.even td {background: #E3E6E6}
+TR.highlight,TABLE#MajorList TR.highlight,TABLE#MajorList TR.highlight td{background: #FFF4C2}
+TABLE#MajorList TR.even:hover,TABLE#MajorList TR.even:hover td,
+TABLE#MajorList TR.odd:hover,TABLE#MajorList TR.odd:hover td,
+TABLE#MajorList TR.highlight:hover,TABLE#MajorList TR.highlight:hover td {background: #ffe8b7}
+#MajorList TR.headings IMG {vertical-align: middle}
+#MajorList TR.headings TD:hover {background: transparent}
+TABLE#MajorList TABLE.tableHeaderTable {table-layout: auto; border: none;}
+TABLE#MajorList TABLE.tableHeaderTable TR:hover {background: transparent}
+table#MajorList td.tablepager {text-align: right; border-top: 1px solid #eee; paddidata-ng-right: 10px;}
+
+/***************
+ * Button Pane *
+ ***************/
+TABLE#MajorList2 {
+	table-layout: auto;
+	margin: 10px 0;
+	width: 98%;
+	border: #ccc 2px solid;
+	font-family: arial, helvetica, sans-serif;
+	border-collapse: collapse
+}
+
+table#MajorList2 input {border: none; background: transparent;}
+table#MajorList2 TR.buttonPane {border-top: #ccc 2px solid; font-size: larger; background: #eee}
+table#MajorList2 TR.buttonPane TD {padding: 10px; background-color: #EEE;}
+table#MajorList2 TR.buttonPane .choice {paddidata-ng-bottom: 10px}
+table#MajorList2 TR.buttonPane .choice * {vertical-align: middle; color: #000;}
+table#MajorList2 TR.buttonPane DIV#separator {border-top: #000 1px solid; height: 10px}
+table#MajorList2 TR.buttonPane TR.buttonPane FORM {display: inline}
+
+TR#newSearch {background: #ffe8b7; text-align: center}
+TR#newSearch TD {padding: 10px}
+TR#newSearch FORM {display: inline}
+P#noResults {margin-top: 10px; font-weight:700; font-size: larger; text-align: center}
+div#relatedLinks {border: none; text-align: center; font-size: 1.4em; margin-top: 1em;}
+
+/**************
+ * Major Info *
+ **************/
+TABLE#majorInfo {width: 99%}
+TABLE#majorInfo TR TD {}
+
+#majorInfo .majorHeading {font-weight:700; font-size: 0.8em; margin: 20px 0 2px 5px; text-align: center}
+TD#rightContent {vertical-align: top; width: 175px}
+
+.rnd-box-maroon {
+	background: url(../images/maroonbar-bg.png) repeat-x 50% top;
+	margin: 0;
+	border-style: none;
+	padding: 0;
+	height: 21px;
+	text-align: center;
+}
+
+.rnd-box-maroon .l-sb {z-index: 10; background: url(../images/maroonbar-l-corner.png) no-repeat left top; border-style: none; height: 21px;}
+.rnd-box-maroon .r-sb {z-index: 10; background: url(../images/maroonbar-r-corner.png) no-repeat right top; height: 21px}
+.rnd-box-maroon P {font-weight:700; font-size: 14px; vertical-align: middle; color: #666; paddidata-ng-top: 13px}
+.rnd-box-greybottom {
+	background: url(../images/greybottom-bg.png) repeat-x 50% top;
+	margin: 0;
+	border-style: none;
+	padding: 0;
+	height: 11px;
+	text-align: center;
+}
+
+.rnd-box-greybottom .l-sb {z-index: 10; background: url(../images/greybottom-l-corner.png) no-repeat left top; border-style: none; height: 11px;}
+.rnd-box-greybottom .r-sb {z-index: 10; background: url(../images/greybottom-r-corner.png) no-repeat right top; height: 11px}
+.rnd-box-greybottom P {font-weight:700; font-size: 14px; vertical-align: middle; color: #666; paddidata-ng-top: 13px}
+
+/*****************
+ * Feedback form *
+ *****************/
+DIV#feedback {position: absolute; bottom: 40px; float: left; padding: 0 0 0 10px; text-align: left; width: 97.8%;}
+div#feedbackForm {width: 70%; paddidata-ng-left: 40px;}
+div#feedbackForm textarea {width: 70%; height: 5em; margin-bottom: 1em;}
+div#feedbackForm input#submit {margin-top: 1em; margin-bottom: 1em;}
+
+/*UL {PADDING: 0; MARGIN: 0; LIST-STYLE-TYPE: none}
+UL LI {MARGIN: 0.5em 0; font-size: 9pt;}
+UL LI UL {MARGIN-LEFT: 25px; LIST-STYLE-TYPE: none}
+UL LI UL LI {MARGIN: 0}*/
+
+TABLE.otherEditions TD.topLeft {PADDIdata-ng-LEFT: 12px; /*BACKGROUND-IMAGE: url(../images/box-line-tl.gif); PADDIdata-ng-TOP: 12px; BACKGROUND-REPEAT: no-repeat*/}
+TABLE.otherEditions TD.topRight {BACKGROUND-IMAGE: url(../images/box-line-tr.gif); BACKGROUND-REPEAT: no-repeat}
+TABLE.otherEditions TD.bottomLeft {BACKGROUND-IMAGE: url(../images/box-line-bl.gif); BACKGROUND-REPEAT: no-repeat}
+TABLE.otherEditions TD.bottomRight {BACKGROUND-IMAGE: url(../images/box-line-br.gif); BACKGROUND-REPEAT: no-repeat}
+TABLE.otherEditions {MARGIN: 0.25em 0}
+TABLE.otherEditions TH {PADDIdata-ng-RIGHT: 10px; /*FONT-SIZE: x-small;*/ TEXT-ALIGN: left}
+TABLE.otherEditions TD {white-space: nowrap;}
+TABLE.otherEditions .listprice {FONT-SIZE: x-small}
+TABLE.otherEditions .price {FONT-SIZE: x-small}
+.otherEditions {table-layout: auto;}
+TABLE TD.otherEditions {VERTICAL-ALIGN: middle; TEXT-ALIGN: left}
+
+/*** Format HR ***/
+hr {text-align: left; color: #E6E6E6; width: 100%; height: 1px; border: none; margin: 3px 0;}  /* For Internet Explorer */
+HTML>BODY HR {margin: 10px 0; padding: 0; width: 100%; height: 2px; background-color: #E6E6E6; border: none;} /* For Gecko-based browsers */
+HTML>BODY HR {margin: 10px 0; padding: 0; width: 100%; height: 2px; background-color: #E6E6E6; border: 0 solid #F00;} /* For Opera and Gecko-based browsers */ 
+
+/** Book List **/
+.textLabel {font-weight:700; width: 70px;}
+.text {width: 280px;}
+#bookList {border: 1.5px -moz-bg-outset #87876A;}
+
+/************************
+   Dropdown GS selector
+************************/
+#dropDown label {font-size: 10px !important; cursor: default !important;}
+#txtGs {width: 98px; height: 12px; font-size: 10px; background-color: #fff !important;}
+#dropDown {
+	width: 190px;
+	height: 260px;
+	background: #E6E6E6;
+	border: 1px solid #000;
+	position: absolute;
+	display: none;
+	margin-left: 181px;
+	/*margin-top: 0;*/
+	color: gray;
+	z-index: 100;
+	line-height: 14px;
+}
+
+.dropUp {
+	width: 190px;
+	height: 260px;
+	background: #E6E6E6;
+	border: 1px solid #000;
+	position: absolute;
+	/*display: none; */
+	margin-left: 181px;
+	margin-top: -278px;
+	color: gray;
+	z-index: 100;
+}
+
+.ss_dropDown {margin-left: 0 !important;}
+#dropDown div {float: left; width: 190px;}
+#dropDown .title {background-color: #FFCC66; color: #000; text-align: center;}
+#closeBtn {text-align: center; width: 190px; paddidata-ng-top: 4px; cursor: pointer;}
+
+/****************************
+ *     LogIn Message        *
+ ****************************/
+#menuMsg {text-align: right; paddidata-ng-right: 40px; font-size: 14px;}
+.bold {font-weight:700;}
+#asu_login { float: right; height: 7px;}
+#asu_login li {
+	border-right: 2px solid #000;
+	color: #000;
+	float: left;
+	line-height: 1em;
+	list-style-type: none;
+	margin: 0;
+	padding: 0 0.41em;
+}
+
+#asu_login li.no-border {border-right: medium none; paddidata-ng-right: 0; text-transform: uppercase;}
+.boldText {color: #444;}
+#asu_login_search {padding: 0 !important; width: 62% !important;}
+
+/****************************
+ *     Book PopUp        *
+ ****************************/
+#cluetip {text-align: justify !important; z-index: 1000 !important;}
+.blur {color: gray; /*font-size: 9px !important;*/}
+
+/****************************
+ *     Admin Page        *
+ ****************************/
+#adminDiv{width: 100%; text-align: center;}
+#adminDiv #tabs{width: 800px; margin-top: 30px; margin-left: auto; margin-right: auto;}
+#adminDiv .tbl .titleTd{text-align: right;}
+.classNbr-value {width: 200px; white-space: normal; paddidata-ng-right: 5pt;}
+#nodisplay,.nodisplay{display:none;}
+
+/*****************
+ scheduler page
+*****************/
+.scheduler{text-align:center; margin-top:50px;}
+.scheduler-message-box{
+	width:455px;
+	height:40px;
+	font-family: Arial,Verdana,sans-serif;
+	font-weight:700;
+	font-size:11px;
+	font-color:#B3B3B3;
+	background-color:#FFE8B7;
+	border: 1px solid #CCC;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:30px;
+	paddidata-ng-top:5px;
+	paddidata-ng-left:10px;
+	align:center;
+}
+
+.scheduler-message{margin-left:40px; margin-top:-20px;}
+.scheduler-popout{margin-left:560px; margin-top:-40px; margin-bottom:-20px;}
+.scheduler-error{
+	margin-top:40px;
+	margin-left:60px;
+	color: #555;
+    display: inline-block;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 14px;
+}
+
+/* CSS for Gen studies fix on the side search in IE */
+#example-one, #gs, #example-three{width:100px; xheight:20px; padding:0; margin:0; xfont-size:8px; xborder:1px solid #000; xbackground:#ccf}
+
+/* Basic overlay CSS */
+.select-overlay { xbackground:#fff }
+.ie-select-width-overlay span{display:block; float:left; clear:both;}
+
+/* Overlay CSS for Internet Explorer 6 and 7 */
+.ie6 .ie-select-width-overlay span, .ie7 .ie-select-width-overlay span{width:17px; height:20px; background-position:0 -18px}
+.ie6 .ie-select-width-overlay-hover span, .ie7 .ie-select-width-overlay-hover span { background-position:-17px -18px }
+.ie6 .ie-select-width-overlay-mouseover span, .ie7 .ie-select-width-overlay-mouseover span { background-position:-18px -18px }
+
+/* Overlay CSS for Internet Explorer 8 */
+.ie8 .ie-select-width-overlay span{width:17px; height:18px; background-position:0 0}
+.ie8 .ie-select-width-overlay-hover span { background-position:-17px 0 }
+.ie8 .ie-select-width-overlay-mouseover span { background-position:-18px 0 }
+
+/* mobile elements */
+.mobile-display,.applyMobileColumnValue,.applyMobileColumnHeader,.mobileClassDetailsBox, #mobile-display-table-menu-wrapper,#class_details_open,#class_details_close,.mobile-display-table-menu-btn,#mobileHeader, #mobileClassHandler{
+	display:none;
+}
+TABLE#CatalogList tr.mobile-loading {display: none;}
+#asu_mobile_button_catalog.asuhide {display: none;}
+.mobile-display-table-menu-hidden{display:none;}
+
+TABLE #mobileClassDetailsTable{border-collapse: collapse; border-style: hidden; margin-top:10px; margin-bottom:10px;}
+TABLE #mobileClassDetailsTable th,TABLE #mobileClassDetailsTable td{border: 1px dotted #C0C0C0;}
+
+/****************************
+This is the responsive part - This media query adapts the design for low resolution screens
+************************************/
+@media only screen and (max-width:780px) {
+/* This code is to prevent webkit from stylizing the buttons itself */
+input[type="button"], input[type="submit"] {-webkit-appearance: none;}
+
+::-webkit-input-placeholder { color:#999; }
+::-moz-placeholder { color:#999; } /* FF 19+ */
+:-moz-placeholder { color:#999; } /* FF 18- */
+:-ms-input-placeholder { color:#999; }
+.placeholder { color:#999 !important; } /* for the polyfill */
+
+td {padding: 0;}
+table {border-spacing: 0;}
+html{overflow-x: hidden;}
+
+DIV#HomeContainer,#asu_hdr{}
+#myasu_bar,#asu_footer,#feedback,.mobile-hide{display:none !important;}
+.mobile-display,.mobileClassDetailsBox{display:block;}
+.nodisplay{display:none !important;} 
+.applyMobileColumnValue,.applyMobileColumnHeader,#class_details_open,#class_details_close{
+	display:table-cell;
+	width: 40px;
+}
+.applyMobileColumnValue {min-width: 20px;}
+#mobileSearchBoxContainer{text-align:center; margin: 0 0 20px 0;}
+#asu_container {min-width: 320px !important;}
+
+/* Advanced Search Box and homepage*/
+#advancedSearchPanel {display: block !important; width:320px !important; }
+.mobile-search-title{font-size:20px; font-weight:bold; text-align:center; margin-top:10px;}
+.ac_results{left:10px !important;}
+#asu_mobile_button_catalog {
+    background: url("https://webapp4.asu.edu/asuthemes/4.0-rsp.1/images/asu_mobile_menu_bttn.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+	display: block;
+	height: 19px;
+	position: absolute;
+	top: 45px;
+	width: 27px;
+}
+
+#asu_mobile_button_catalog a {
+    border-bottom: medium none;
+    cursor: pointer;
+    display: block;
+    height: 19px;
+    letter-spacing: -20px;
+    overflow: hidden;
+    text-decoration: none;
+    text-indent: -9999px;
+    width: 27px;
+}
+
+/*******************************************************
+* Quick Search
+********************************************************/
+#subjectMobile .browse {color: #A30046; float: left;margin: 0 0 5px 0;font-size: 15px;}
+#subjectMobile .browse:hover {cursor:pointer;}
+#SideSearchBox {padding: 0 20px;}
+.advancedSearchBoxContentContainer{margin:0; padding:0;}
+.sideSearchBoxContentContainer {margin:0; padding:0;}
+.sideSearchBoxContent {background: #fff; border: none;margin: 0;padding: 0;}
+#classes-slider, #campus-slider {display: inline;}
+#searchCriteriaSliders {width: 100%; margin: 0;}
+#searchCriteria > div {margin: 20px 0;}
+
+#searchCriteria input[type="text"] {
+    width: 93%;
+    height: 35px;
+    padding: 0 10px;
+    margin: 0 25px 0 0;
+    font-size: 15px;
+    color: #666;
+    border: 1px solid #CFCFCF;
+    border-radius: 3px;
+    background: -webkit-linear-gradient(#f0f0f0, #dfdfdf);
+    background: -o-linear-gradient(#f0f0f0, #dfdfdf);
+	background: -moz-linear-gradient(#f0f0f0, #dfdfdf);
+	background: linear-gradient(#f0f0f0, #dfdfdf);
+}
+input#Go {
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    background: #A30046;
+    width: 100%;
+    border-radius: 3px;
+    border: none;
+    height: 40px;
+}
+
+#mobileAdvancedSearchHandler, #mobileAdvancedSearchHandler2 {
+	display:block;
+    background-color: #000;
+    color: #E0E0E0;
+	font-size: 14px;
+	font-weight: 700;
+	height: 35px;
+	margin: -2px 0 0 0;
+}
+#mobileAdvancedSearchHandler > img, #mobileAdvancedSearchHandler2 > img {
+	float: left;
+	position: relative;
+	top: 7px;
+	left: 10px;
+}
+#mobileAdvancedSearchHandler > div, #mobileAdvancedSearchHandler2 > div {
+    float: right;
+    position: relative;
+    top: 10px;
+    left: -20px;
+}
+#mobileHeader {
+    height: 85px;
+    display: block;
+    text-transform: lowercase;
+    background: #A30046;
+}
+#mobileHeader .mobileHeaderText {
+    font-size: 41px;
+    font-weight: 700;
+    color: #fff;
+    position: relative;
+    top: 50px;
+    left: 20px;
+    width: 90%;
+    text-align: left;
+}
+#mobileHeader .mobileResultsText {
+	color: #fff;
+	position: relative;
+	top: 25px;
+	left: 40px;
+	float: right;
+	font-size: 15px;
+}
+
+#mobileHeader .mobileResultsTermText {
+	color: #ffcb66;
+    float: right;
+    left: -20px;
+    position: relative;
+    size: 15px;
+    text-transform: uppercase;
+    top: 45px;
+	
+}
+
+#mobileSubjects #mobileHeader {
+    height: 120px;
+    display: block;
+    background: #A30046;
+}
+#mobileSubjects #mobileHeader .mobileHeaderText {
+    font-size: 30px;
+    font-weight: 700;
+    color: #fff;
+    position: relative;
+    top: 20px;
+    left: 20px;
+    width: 90%;
+}
+
+/**************************************************
+* Dropdowns
+***************************************************/
+.mobile-dropdown {
+    width: 100%;
+    height: 35px;
+    overflow:hidden;
+    outline: none;
+    margin: 0 auto;
+    border: 1px solid #CFCFCF;
+    border-radius: 3px;
+    background: -webkit-linear-gradient(#f0f0f0, #dfdfdf);
+    background: -o-linear-gradient(#f0f0f0, #dfdfdf);
+	background: -moz-linear-gradient(#f0f0f0, #dfdfdf);
+	background: linear-gradient(#f0f0f0, #dfdfdf);
+}
+.mobile-dropdown span.fieldname {display: none;}
+.mobile-dropdown span.fieldname.placeholder {
+    height: 100%;
+    border: none;
+    background: transparent;
+    margin: 0;
+	padding: 0 10px;
+    font-size: 15px !important;
+    display: inline;
+    position: relative;
+	top: 10px;
+	float: left;
+}
+.mobile-dropdown span.select {
+	float: right;
+	border-left: 1px solid #CFCFCF;
+	width: 35px;
+	height: 100%;
+	display: inline;
+}
+
+.mobile-dropdown span.up-arrow {
+	width: 0; 
+	height: 0; 
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-bottom: 5px solid #b1b1b1;
+	display: block;
+	margin: 0 auto;
+	position: relative;
+	top: 10px;
+}
+
+.mobile-dropdown span.down-arrow {
+	width: 0; 
+	height: 0; 
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 5px solid #b1b1b1;
+	display: block;
+	margin: 0 auto;
+	position: relative;
+	top: 15px;
+}
+
+.mobile-dropdown select{
+    width: 120% !important;
+    height: 100%;
+    border: none;
+    background: transparent;
+    margin: 0;
+	padding: 0 10px;
+    font-size: 15px !important;
+    display: inline !important;
+    position: relative;
+    top: -35px;
+    color: #666;
+}
+
+/**************************************************
+* Text Field
+***************************************************/
+.mobile-input {
+    width: 100%;
+    height: 35px;
+    overflow:hidden;
+    outline: none;
+    margin: 0 auto;
+    border: 1px solid #CFCFCF;
+    border-radius: 3px;
+    background: -webkit-linear-gradient(#f0f0f0, #dfdfdf);
+    background: -o-linear-gradient(#f0f0f0, #dfdfdf);
+	background: -moz-linear-gradient(#f0f0f0, #dfdfdf);
+	background: linear-gradient(#f0f0f0, #dfdfdf);
+}
+
+.mobile-input input{
+    width: 100% !important;
+    height: 100%;
+    border: none !important;
+    background: transparent !important;
+    margin: 0 !important;
+	padding: 0 10px !important;
+    font-size: 15px !important;
+    display: inline !important;
+    color: #666;
+}
+
+/**************************************************
+* Date/Time
+***************************************************/
+.mobile-time, .mobile-date {
+    width: 41%;
+    min-width: 135px;
+    height: 35px;
+	float: left;
+    overflow:hidden;
+    outline: none;
+    border: 1px solid #CFCFCF;
+    border-radius: 3px;
+    background: -webkit-linear-gradient(#f0f0f0, #dfdfdf);
+    background: -o-linear-gradient(#f0f0f0, #dfdfdf);
+	background: -moz-linear-gradient(#f0f0f0, #dfdfdf);
+	background: linear-gradient(#f0f0f0, #dfdfdf);
+}
+
+.mobile-time span{
+	float: right;
+	border-left: 1px solid #CFCFCF;
+	width: 35px;
+	height: 100%;
+	display: inline;
+	background: url(../images/mobile/clock.png) no-repeat;
+	background-size: 32px;
+	background-position: 1px;
+}
+
+.mobile-time input{
+    width: 100% !important;
+    height: 100%;
+    border: none !important;
+    background: transparent !important;
+    margin: 0 !important;
+	padding: 0 10px !important;
+    font-size: 15px !important;
+    display: inline !important;
+    position: relative;
+    top: -35px;
+    color: #666;
+}
+
+.mobile-date input{
+    width: 100% !important;
+    height: 100%;
+    border: none !important;
+    background: transparent !important;
+    margin: 0 !important;
+	padding: 0 10px !important;
+    font-size: 15px !important;
+    display: inline !important;
+    color: #666;
+}
+
+/**************************************************
+* Checkboxes
+***************************************************/
+.mobile-checkbox {display:inline-block;}
+.mobile-checkbox .checkbox {
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border-radius: 1138px;
+    border: 1px solid #CACACA;
+    display: table;
+    -webkit-box-shadow: 0 1px 0 0 rgba(255,255,255,1);
+    -moz-box-shadow: 0 1px 0 0 rgba(255,255,255,1);
+    box-shadow: 0 1px 0 0 rgba(255,255,255,1);
+}
+.mobile-checkbox .checked {display:table-cell; vertical-align:middle;margin: 0 auto;}
+
+input:checked ~ div > .checkbox > .checked > span {
+    width: 10px !important;
+    height: 10px;
+    background: #666;
+    margin: 0 auto;
+    border-radius: 1138px;
+    display: block !important;
+}
+
+/**************************************************
+* Mobile Advanced Class Search
+***************************************************/
+#mobileDays{width: 100%; display: table;}
+#mobileDays .dayOfWeek-label, #mobileDays .dayOfWeek-input { display: table-row;}
+#mobileDays .dayOfWeek-label > span, #mobileDays .dayOfWeek-input > div {
+    display: table-cell; 
+    width: 12.2857143%;
+    height: 25px;
+    text-align: center;
+    vertical-align:middle;
+	font-size: 15px;
+}
+#mobileAdvancedSearch {
+    padding: 20px;
+    background: #E0E0E0;
+    color: #666;
+}
+#ptTimeSelectCntr {margin: 0 auto !important; position: relative !important; left: 0 !important;}
+#mobileAdvancedSearchTitle {
+    color: #A30046;
+    font-size: 25px;
+    font-weight: 700;
+    margin: 10px 0 15px 0;
+}
+#mobileAdvancedSearchSubmit {
+    width: 100%;
+    background: #A30046;
+    border: none;
+    border-radius: 0;
+    min-height: 48px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    margin: -2px 0 0 0;
+}
+#mobileAdvancedSearchPleaseWait {
+    position: relative;
+	top: 10px;
+    left: -60px;
+    margin: 0 0 0 50%;
+}
+#mobileAdvancedSearch .mobile-dropdown {margin: 10px 0; width: 100%;}
+#mobileGenStudiesAnd1 option:disabled, #mobileGenStudiesAnd2 option:disabled {display: none;}
+#mobileAdvancedSearch input[type="text"] {
+    width: 93%;
+    height: 35px;
+    padding: 0 10px;
+	margin: 5px 0;
+    font-size: 15px;
+    color: #666;
+    border: 1px solid #CFCFCF;
+    border-radius: 3px;
+    background: -webkit-linear-gradient(#f0f0f0, #dfdfdf);
+    background: -o-linear-gradient(#f0f0f0, #dfdfdf);
+	background: -moz-linear-gradient(#f0f0f0, #dfdfdf);
+	background: linear-gradient(#f0f0f0, #dfdfdf);
+}
+
+#functions {
+    background: #292929;
+    color: #E0E0E0;
+    font-size: 15px;
+    display:table;
+    width: 100%;
+}
+#functions.nodisplay{display:none;}
+#functions a, #functions a:visited {color:#e0e0e0}
+#functions img{height: 15px; margin: 0 10px;}
+#functions .row{display:table-row;}
+#functions .add, #functions .drop, #functions .swap, #functions .edit {
+    height: 40px;
+    width: 50%;
+    vertical-align: middle;
+    display: table-cell;
+}
+#functions .add {border-right: 2px solid #3C3C3C; border-bottom: 2px solid #3C3C3C;}
+#functions .drop {border-bottom: 2px solid #3C3C3C;}
+#functions .swap {border-right: 2px solid #3C3C3C;}
+
+#mobileHonors {position: relative; top: -10px; font-size: 15px;}
+#mobileHonors .mobile-checkbox {position: relative; top: 7px; left: 5px;}
+#mobileTime #mobileStartTime{float: left}
+#mobileTime #mobileEndTime{float: right}
+#mobileDate #mobileStartDate{float:left; }
+#mobileDate #mobileEndDate{float:right; }
+#mobileTime {margin: 7px 0 0 0;}
+#mobileDate {margin: 70px 0 0 0; position: relative;top: -15px;}
+#mobileLocation {position: relative;top: -2px;}
+#mobileSearchToggle {color: #A30046; font-size: 15px;margin: 15px 0 -5px 0;}
+#mobileClassBlocks {float: right; margin: -10px 0 0 0;}
+#mobileClearButton a, #mobileClassBlocks a{ font-size: 15px;}
+#mobileCatalogNumber, #mobileClassNumber, #mobileInstructorName {margin: 10px 0;}
+
+/*
+Display box, user can choose the fields to display for hte results page
+*/
+.class-message{display:none;}
+#mobile-display-table-menu-wrapper {display:block;}
+#mobile-display-table-menu-wrapper ul{list-style:none;}
+
+.mobile-display-table-menu-btn {
+	display:block !important;
+	background-color: #990142;
+    width: 80%;
+	border-radius: 5px;
+	padding: 10px;
+	color: #fff !important;
+    font-size: 15px;
+    text-decoration: none;
+	text-transform: uppercase;
+	font-weight: 700;
+	margin: 20px auto 25px auto;
+	text-align: center;
+	max-height: 32px;
+	position: relative;
+	z-index: 100;
+}
+#mobile-display-table-menu {
+    background-color: #A40047;
+    font-size: 12px;
+    padding: 10px;
+    width: 80%;
+    margin: -25px auto -135px auto;
+    color: #fff;
+    position: relative;
+    top: -5px;
+    z-index: 99;
+}
+#mobile-display-table-menu .left-menu, #mobile-display-table-menu .right-menu {width: 40%; display: inline-block; padding: 0;}
+#mobile-display-table-menu .left-menu {padding: 0 0 0 30px;}
+
+TABLE#CatalogList {
+	border: none;
+	border-spacing: 0;
+	table-layout: auto;
+	margin: -5px 0 0 0;
+	width: 100%;
+	font-family: arial, helvetica, sans-serif;
+	z-index: 0;
+}
+
+TABLE#CatalogList TR.headings TH {
+	border-right: #fff 1px solid;
+	font-weight: 700;
+	background: -webkit-linear-gradient(#BABABA, #B2B2B2);
+    background: -o-linear-gradient(#BABABA, #B2B2B2);
+	background: -moz-linear-gradient(#BABABA, #B2B2B2);
+	background: linear-gradient(#BABABA, #B2B2B2);
+	height: 35px;
+	color: #fff;
+}
+
+TABLE#CatalogList TR.headings TH:hover {
+	background: -webkit-linear-gradient(#B2B2B2, #BABABA);
+    background: -o-linear-gradient(#B2B2B2, #BABABA);
+	background: -moz-linear-gradient(#B2B2B2, #BABABA);
+	background: linear-gradient(#B2B2B2, #BABABA);
+	
+}
+TABLE#CatalogList td{text-align:left; color:#666;}
+TABLE#CatalogList .startTimeDateColumnValue, TABLE#CatalogList .endTimeDateColumnValue{text-transform:lowercase;}
+tr.grpEven, .grpEven td, .grpEvenTitle td, tr.grpEven:hover, .grpEven td:hover, .grpEvenTitle td:hover{background: #EAE8E9 !important;}
+tr.grpOdd, .grpOdd td, .grpOddTitle td, tr.grpOdd:hover, .grpOdd td:hover, .grpOddTitle td:hover {background: #F7F7F7 !important;}
+TABLE#CatalogList TR.headings A {color: #fff !important; text-decoration: none;white-space: nowrap;}
+TABLE#CatalogList tr.mobile-collapse, TABLE#CatalogList tr.mobile-loading {display: none;}
+TABLE#CatalogList tr.mobile-collapse.expand, TABLE#CatalogList tr.mobile-loading.expand {display: table-row;}
+TABLE#CatalogList td.applyMobileColumnValue {background: url(../images/mobile/arrow_right_gray.png) no-repeat 10px 15px !important;}
+TABLE#CatalogList td.applyMobileColumnValue.expand {background: url(../images/mobile/arrow_down_gray.png) no-repeat 10px 15px !important;}
+TABLE#CatalogList TR.grpEvenTitle td.applyMobileColumnValue{background-color:#EAE8E9 !important;}
+TABLE#CatalogList TR.grpOddTitle td.applyMobileColumnValue{background-color:#F7F7F7 !important;}
+
+/*
+	Search Results page, hide some columns for mobile display
+*/
+.booktip,.suntip,.classNbrColumnHeader,.classNbrColumnValue,.hoursColumnHeader,.hoursColumnValue,.startDateColumnHeader,.startDateColumnValue,.dayListColumnHeader,.dayListColumnValue,.startTimeDateColumnHeader,.startTimeDateColumnValue,
+.endTimeDateColumnHeader,.endTimeDateColumnValue,.locationBuildingColumnHeader,.locationBuildingColumnValue,.tooltipRqDesDescrColumnHeader,.tooltipRqDesDescrColumnValue,
+.instructorListColumnHeader,.instructorListColumnValue,.availableSeatsColumnHeader,.availableSeatsColumnValue,.applyColumnValue,.applyColumnHeader{
+	display:none;
+}
+
+TABLE#CatalogList #cohortMessage {
+    font-style: oblique;
+    position: relative;
+    width: auto;
+    white-space:normal;
+}
+
+TABLE#CatalogList td{
+	font-size:10pt;
+	height: 35px;
+	vertical-align: middle;
+}
+
+.mobilePlusBtn{
+	position:absolute;
+	margin-top:-22px;
+	cursor:pointer;
+	border:solid transparent;
+	border-width:0 10px 0 10px;
+}
+
+/**************************************************
+* Class Information on Results page
+***************************************************/
+.time {text-transform: lowercase;}
+.mobileClassDetailsBox #mobileHeader {display: none;}
+.backToResults, .mobileClassDetailsCourseOverview, .mobileClassDetailsLateRegWarning, .mobileClassDetailsEnrollmentRequirements, .mobileClassDetailsClassMeetingDetails, .mobile-reserved-seat-information, .mobile-reserved-seat-information-notice, .mobile-reserved-seat-information-table{display: none;}
+.mobileClassDetailsAddClass, .mobileClassDetailsLateRegistration {float: left; width: 45%;}
+.mobileClassDetailsLearnMore {float: right;width: 45%;}
+.mobileClassDetailsCourseHeader {font-size: 17px; font-weight: 700; color: #000; margin: 10px 0 20px 0; width: 80%;}
+.mobileClassDetailsCourseIndicator{ position:relative; top: -50px; float: right}
+.mobileClassDetailsTitle { font-weight: 700; color: #990142; font-size: 15px;}
+.mobileClassDetailsText {margin: 5px 0 20px 0; color: #666;}
+.mobileClassDetailsBox {padding: 0 10px}
+.mobileClassDetailsBox > img{margin: 0 0 0 50%; position: relative;left: -60px;}
+.mobileClassDetailsTable {width: 100%; margin: 5px 0 10px 0;}
+.mobileClassDetailsTable th {border-right: 1px solid #dfdfdf; border-bottom: 1px solid #dfdfdf;padding: 5px;}
+.mobileClassDetailsTable th:last-child {border-right: none;}
+.mobileClassDetailsTable td {border-right: 1px solid #dfdfdf;}
+.mobileClassDetailsTable td:last-child {border-right: none;}
+.mobileClassDetailsAddClass a, .mobileClassDetailsLateRegistration a, .mobileClassDetailsLearnMore a{
+    display: inline-block;
+    background: #A30046;
+    font-weight: 700;
+    font-size: 12px;
+    border-radius: 5px;
+    text-align: center;
+	vertical-align:middle;
+    width: 100%;
+    padding: 10px 0;
+    max-height: 15px !important;
+    min-height: 15px !important;
+    margin: 0 0 30px 0;
+}
+.mobileClassDetailsLateRegistration a{padding: 10px;}
+.mobileClassDetailsLoading {margin: 0 auto; width: 120px; display: none !important;}
+.mobileClassDetailsAddClass img{
+	width: 20px;
+	float:left;
+	position: relative;
+	top: -2px;
+	left: 15%;
+}
+.mobileClassDetailsLateRegistration img{
+	width: 20px;
+	float:left;
+	position: relative;
+	top: -2px;
+	left: 2%;
+}
+
+.mobileClassDetailsLearnMore img{float:left; height: 20px; position: relative; top: -2px; left: 15%;}
+.mobileClassDetailsTable td {padding: 5px !important; height: 20px !important;}
+
+#mobile-load-material .mobileClassDetailsCourseHeader img{display:none;}
+#mobile-load-material #mobileHeader, #mobile-load-material .backToResults{display: block;}
+#mobile-load-material .mobileClassDetailsCourseOverview, 
+#mobile-load-material .mobileClassDetailsLateRegWarning, 
+#mobile-load-material .mobileClassDetailsEnrollmentRequirements, 
+#mobile-load-material .mobileClassDetailsClassMeetingDetails,
+#mobile-load-material .mobile-reserved-seat-information{display: block; padding: 10px 0; color:#666;}
+#mobile-load-material .backToResults{color: #A30046; margin: 15px 0;}
+#mobile-load-material .mobileClassDetailsContainer{padding: 0 20px;}
+#mobile-load-material .mobileClassDetailsLateRegWarning {background: #FEF6E3; padding: 20px; font-weight: 700;}
+#mobile-load-material .mobileClassMeetingOverview, #mobile-load-material .mobileClassDetailsLearnMore {display:none;}
+#mobile-load-material .mobileClassDetailsAddClass, #mobile-load-material .mobileClassDetailsLateRegistration {float:none; width: 100%; margin: 0 auto;}
+#mobile-load-material .books-more-information {text-decoration: underline; color: #A30046;}
+#mobile-load-material .mobile-reserved-seat-information{display: block; color: #A30046;font-size: 15px;font-weight: 700;}
+#mobile-load-material .mobile-reserved-seat-information .expand{display:none;}
+#mobile-load-material .mobile-reserved-seat-information.expand > .expand{display:inline-block;}
+#mobile-load-material .mobile-reserved-seat-information.expand > .collapse{display:none;}
+#mobile-load-material .mobile-reserved-seat-information-notice,
+#mobile-load-material .mobile-reserved-seat-information-table{display: none; color:#666;}
+#mobile-load-material .mobile-reserved-seat-information-notice.expand,
+#mobile-load-material .mobile-reserved-seat-information-table.expand{display:block;}
+#mobile-load-material #mobileHeader .mobileResultsText {text-transform:uppercase; color:#FFCB66;}
+#mobile-load-material .mobileClassDetailsCourseIndicator{display:none;}
+#mobile-load-material .mobileClassDetailsLoading {display: block !important;}
+#mobile-load-material .mobileClassDetailsLoading.nodisplay {display: none !important;}
+
+/**************************************************
+* Books Modal
+***************************************************/
+#mobile-books-load-material {position: absolute; top: 0; background: rgba(0,0,0,0.5); width: 100%; height: 100%;}
+#mobile-books-load-material > div {background: #fff; width: 250px; margin: 25% auto; padding: 20px; border-radius: 5px;}
+#mobile-books-load-material .header {font-weight: 700; font-size: 15px; color: #A40047; padding: 0 0 10px 0;}
+#mobile-books-load-material .title {margin: 0 5px 0 0; font-weight: 700;}
+#mobile-books-load-material .book-info {padding: 10px 0 0 0;}
+#mobile-books-load-material .book-img {width: 100%;}
+#mobile-books-load-material .close-books-content {width: 45px; height: 45px; padding: 0; margin: -45px 0 0 0; position: relative; left: 236px; top: 42px; font-size: 35px;}
+
+/**************************************************
+* Browse By Subject *
+***************************************************/
+#mobileSubjectList {padding: 15px 20px; background: #000;color: #fff;}
+#mobileSubjectArrow {width: 0; height: 0; border-left: 10px solid transparent; border-right: 10px solid transparent; border-top: 10px solid #A30046; display: block; margin: 0 auto; position: relative; float: left; top: 54px; left: 20px;}
+#letters{padding: 0 20px;position: relative;top: 45px;}
+#letters span {width: 7.692307692307692%; display: inline-block; text-align: center; padding: 0 0 10px 0;}
+#letters a {font-weight: 700; font-size: 15px; color: #000; text-decoration:none;}
+.subject {display: table;padding: 0 0 10px 0;}
+.subject:hover {cursor:pointer;}
+.subjectCode, .subjectTitle {display: table-cell; overflow: hidden;}
+.subjectCode {min-width: 50px;}
+.subjectTitle {white-space: nowrap;}
+.letter {color: #FFCB66; font-weight: 700; font-size: 32px; padding: 12px 0;}
+}
