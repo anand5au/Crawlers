@@ -1,0 +1,9 @@
+CREATE TABLE crawler
+(
+  url text,
+  html_cont text,
+  sha256_sig character(64) NOT NULL,
+  text_content text,
+  created timestamp without time zone,
+  CONSTRAINT pk_sha PRIMARY KEY (sha256_sig)
+)
